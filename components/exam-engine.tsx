@@ -15,6 +15,16 @@ import { Clock, Flag, RotateCcw, Calculator as CalculatorIcon } from 'lucide-rea
 type Answer = { [key: number]: number };
 type Flagged = Set<number>;
 
+// Map exam questions to QuestionDisplay format
+const mappedQuestions = examQuestions.map((q) => ({
+  id: q.id,
+  chapter: `Ch.${q.chapter}: ${q.topic}`,
+  text: q.question,
+  options: q.options,
+  correctAnswer: q.answer,
+  explanation: q.explanation,
+}));
+
 export function ExamEngine() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<Answer>({});
@@ -61,7 +71,7 @@ export function ExamEngine() {
   const handleSubmitExam = () => {
     let correctCount = 0;
     examQuestions.forEach((q, idx) => {
-      if (answers[idx] === q.correctAnswer) {
+      if (answers[idx] === q.answer) {
         correctCount++;
       }
     });
@@ -91,7 +101,7 @@ export function ExamEngine() {
     return (
       <ScoreCard
         score={score}
-        total={examQuestions.length}
+        total={mappedQuestions.length}
         timeSpent={3600 - timeRemaining}
         onRetake={handleResetExam}
         answers={answers}
@@ -99,7 +109,7 @@ export function ExamEngine() {
     );
   }
 
-  const question = examQuestions[currentQuestion];
+  const question = mappedQuestions[currentQuestion];
   const isAnswered = currentQuestion in answers;
   const isFlagged = flagged.has(currentQuestion);
 
