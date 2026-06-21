@@ -52,7 +52,7 @@ export default function Home() {
           </header>
 
           {/* Content */}
-          <div className="flex-1 overflow-auto">
+          <div className="flex-1 overflow-auto pb-28">
             {view === 'home' && <Dashboard onStartExam={handleStartExam} onSelectChapter={handleSelectChapter} />}
             {view === 'chapter' && selectedChapter !== null && (
               <ChapterNotes chapterNumber={selectedChapter} />
@@ -65,7 +65,7 @@ export default function Home() {
       {/* Floating Calculator Button */}
       <button
         onClick={() => setCalculatorOpen(true)}
-        className="fixed bottom-8 right-8 z-40 flex items-center justify-center size-14 rounded-full glass-card neon-border hover:bg-cyan-500/10 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/30 active:scale-95 group"
+        className="fixed bottom-24 right-8 z-40 flex items-center justify-center size-14 rounded-full glass-card neon-border hover:bg-cyan-500/10 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/30 active:scale-95 group"
         title="Open Calculator"
       >
         <CalculatorIcon className="size-6 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
