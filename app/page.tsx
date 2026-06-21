@@ -7,6 +7,7 @@ import { Dashboard } from '@/components/dashboard';
 import { ChapterNotes } from '@/components/chapter-notes';
 import { ExamEngine } from '@/components/exam-engine';
 import { Calculator } from '@/components/calculator';
+import { Footer } from '@/components/footer';
 import { Calculator as CalculatorIcon } from 'lucide-react';
 
 export default function Home() {
@@ -72,6 +73,9 @@ export default function Home() {
 
       {/* Calculator Modal */}
       <Calculator isOpen={calculatorOpen} onClose={() => setCalculatorOpen(false)} />
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
