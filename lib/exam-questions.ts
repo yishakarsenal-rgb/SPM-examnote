@@ -167,7 +167,7 @@ export const examQuestions: ExamQuestion[] = [
       "Project management is required to plan, coordinate, and control the complex, diverse activities involved in modern projects. It provides systematic approaches to achieve project goals within constraints.",
   },
 
-  // ===== CHAPTER 2: PROJECT INTEGRATION MANAGEMENT =====
+  // CHAPTER 2 PROJECT INTEGRATION MANAGEMENT
   {
     id: 11,
     chapter: 2,
@@ -320,7 +320,7 @@ export const examQuestions: ExamQuestion[] = [
       "Developing the Project Management Plan is the process that coordinates all planning efforts into a coherent document. The output is the Project Management Plan.",
   },
 
-  // ===== CHAPTER 3: PROJECT SCOPE MANAGEMENT =====
+  // CHAPTER 3 PROJECT SCOPE MANAGEMENT
   {
     id: 21,
     chapter: 3,
@@ -478,7 +478,7 @@ export const examQuestions: ExamQuestion[] = [
       "A unique numbering system in a WBS allows tracking of each element for schedule development, cost tracking, and responsibility assignment throughout the project lifecycle.",
   },
 
-  // ===== CHAPTER 4: PROJECT SCHEDULE MANAGEMENT =====
+  // CHAPTER 4 PROJECT SCHEDULE MANAGEMENT
   {
     id: 31,
     chapter: 4,
@@ -622,7 +622,7 @@ export const examQuestions: ExamQuestion[] = [
       "Parametric estimating uses project characteristics (parameters) in a mathematical model, such as productivity rates or industry standards, to estimate costs or durations.",
   },
 
-  // ===== CHAPTER 5: PROJECT COST MANAGEMENT =====
+  // CHAPTER 5 PROJECT COST MANAGEMENT
   {
     id: 41,
     chapter: 5,
@@ -765,7 +765,7 @@ export const examQuestions: ExamQuestion[] = [
       "Bottom-up estimating provides the MOST ACCURATE estimates by estimating individual work items/activities and summing them up. The main disadvantage is that it is time-consuming and costly.",
   },
 
-  // ===== CHAPTER 6: HR MANAGEMENT =====
+  // CHAPTER 6 HR MANAGEMENT
   {
     id: 51,
     chapter: 6,
@@ -918,7 +918,7 @@ export const examQuestions: ExamQuestion[] = [
       "Theory Z (Ouchi) is based on Japanese management principles: participative decision-making, long-term employment, commitment, opportunity, and advancement. It emphasizes trust and collective responsibility.",
   },
 
-  // ===== CHAPTER 7: RISK MANAGEMENT =====
+  // CHAPTER 7 RISK MANAGEMENT
   {
     id: 61,
     chapter: 7,
@@ -1070,7 +1070,7 @@ export const examQuestions: ExamQuestion[] = [
       "A contingency budget reserve is a financial provision held by the project or organization specifically to mitigate costs caused by identified risk events. It is different from management reserves (for unknown unknowns).",
   },
 
-  // ===== CHAPTER 8: QUALITY MANAGEMENT =====
+  // CHAPTER 8 QUALITY MANAGEMENT
   {
     id: 71,
     chapter: 8,
@@ -1220,7 +1220,7 @@ export const examQuestions: ExamQuestion[] = [
       "Quality standards come from donors, beneficiaries, the organization, and external agencies (like Sphere). The project manager's personal preferences are NOT a valid source of quality standards.",
   },
 
-  // ===== MIXED COMPREHENSIVE QUESTIONS =====
+  // MIXED COMPREHENSIVE QUESTIONS
   {
     id: 81,
     chapter: 5,
