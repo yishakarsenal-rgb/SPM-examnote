@@ -1,21 +1,26 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Progress } from '@/components/ui/progress';
-import { ScrollArea } from '@/components/ui/scroll-area';
-import { Separator } from '@/components/ui/separator';
-import { examQuestions } from '@/lib/exam-questions';
-import { QuestionDisplay } from './question-display';
-import { ScoreCard } from './score-card';
-import { Calculator } from './calculator';
-import { Clock, Flag, RotateCcw, Calculator as CalculatorIcon } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Progress } from "@/components/ui/progress";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Separator } from "@/components/ui/separator";
+import { examQuestions } from "@/lib/exam-questions";
+import { QuestionDisplay } from "./question-display";
+import { ScoreCard } from "./score-card";
+import { Calculator } from "./calculator";
+import {
+  Clock,
+  Flag,
+  RotateCcw,
+  Calculator as CalculatorIcon,
+} from "lucide-react";
 
 type Answer = { [key: number]: number };
 type Flagged = Set<number>;
 
-// Map exam questions to QuestionDisplay format
+// map exam questions to questiondisplay format
 const mappedQuestions = examQuestions.map((q) => ({
   id: q.id,
   chapter: `Ch.${q.chapter}: ${q.topic}`,
@@ -34,7 +39,7 @@ export function ExamEngine() {
   const [score, setScore] = useState(0);
   const [calculatorOpen, setCalculatorOpen] = useState(false);
 
-  // Timer
+  // timer
   useEffect(() => {
     if (isExamComplete || timeRemaining <= 0) return;
     const timer = setInterval(() => {
@@ -91,7 +96,7 @@ export function ExamEngine() {
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
     const secs = seconds % 60;
-    return `${mins}:${secs.toString().padStart(2, '0')}`;
+    return `${mins}:${secs.toString().padStart(2, "0")}`;
   };
 
   const progressPercent = ((currentQuestion + 1) / examQuestions.length) * 100;
@@ -115,7 +120,7 @@ export function ExamEngine() {
 
   return (
     <div className="flex flex-col gap-4 h-full">
-      {/* Header with timer and progress */}
+      {/* header with timer and progress */}
       <div className="glass-card p-4 rounded-lg">
         <div className="flex items-center justify-between gap-4 flex-wrap">
           <div className="flex items-center gap-2">
@@ -129,9 +134,7 @@ export function ExamEngine() {
               <span className="text-xs text-muted-foreground">
                 Question {currentQuestion + 1} / {examQuestions.length}
               </span>
-              <span className="text-xs neon-text">
-                {answered} answered
-              </span>
+              <span className="text-xs neon-text">{answered} answered</span>
             </div>
             <Progress value={progressPercent} className="h-2" />
           </div>
@@ -140,7 +143,10 @@ export function ExamEngine() {
               {answered}/{examQuestions.length}
             </Badge>
             {isFlagged && (
-              <Badge variant="secondary" className="bg-yellow-500/20 text-yellow-400">
+              <Badge
+                variant="secondary"
+                className="bg-yellow-500/20 text-yellow-400"
+              >
                 Flagged
               </Badge>
             )}
@@ -148,9 +154,9 @@ export function ExamEngine() {
         </div>
       </div>
 
-      {/* Main content: Question + Navigation */}
+      {/* main content question and navigation */}
       <div className="flex gap-4 flex-1 min-h-0">
-        {/* Question display */}
+        {/* question display */}
         <div className="flex-1 flex flex-col gap-4 min-w-0">
           <QuestionDisplay
             question={question}
@@ -161,7 +167,7 @@ export function ExamEngine() {
             isFlagged={isFlagged}
           />
 
-          {/* Action buttons */}
+          {/* action buttons */}
           <div className="flex gap-2 flex-wrap">
             <Button
               variant="outline"
@@ -170,7 +176,7 @@ export function ExamEngine() {
               onClick={handleToggleFlag}
             >
               <Flag className="size-4 mr-2" />
-              {isFlagged ? 'Unflag' : 'Flag'}
+              {isFlagged ? "Unflag" : "Flag"}
             </Button>
             <div className="flex-1" />
             <Button
@@ -211,7 +217,7 @@ export function ExamEngine() {
           </div>
         </div>
 
-        {/* Question Navigator Panel */}
+        {/* question navigator panel */}
         <div className="hidden lg:flex flex-col gap-2 w-48">
           <div className="glass-card p-3 rounded-lg">
             <p className="text-xs font-semibold text-muted-foreground mb-2 uppercase tracking-wide">
@@ -225,18 +231,19 @@ export function ExamEngine() {
                   const isFlaggedQ = flagged.has(idx);
 
                   let classes =
-                    'size-8 rounded text-xs font-semibold cursor-pointer transition-all flex items-center justify-center ';
+                    "size-8 rounded text-xs font-semibold cursor-pointer transition-all flex items-center justify-center ";
 
                   if (isCurrentQ) {
-                    classes += 'q-current';
+                    classes += "q-current";
                   } else if (isFlaggedQ && hasAnswer) {
-                    classes += 'bg-yellow-500/30 border border-yellow-500/60 text-yellow-400';
+                    classes +=
+                      "bg-yellow-500/30 border border-yellow-500/60 text-yellow-400";
                   } else if (isFlaggedQ) {
-                    classes += 'q-flagged';
+                    classes += "q-flagged";
                   } else if (hasAnswer) {
-                    classes += 'q-answered';
+                    classes += "q-answered";
                   } else {
-                    classes += 'q-unanswered';
+                    classes += "q-unanswered";
                   }
 
                   return (
@@ -271,8 +278,11 @@ export function ExamEngine() {
         </div>
       </div>
 
-      {/* Calculator Modal */}
-      <Calculator isOpen={calculatorOpen} onClose={() => setCalculatorOpen(false)} />
+      {/* calculator modal */}
+      <Calculator
+        isOpen={calculatorOpen}
+        onClose={() => setCalculatorOpen(false)}
+      />
     </div>
   );
 }
