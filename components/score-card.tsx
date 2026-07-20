@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Progress } from '@/components/ui/progress';
-import { Separator } from '@/components/ui/separator';
-import { examQuestions } from '@/lib/exam-questions';
-import { RotateCcw, Home, CheckCircle, XCircle } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Progress } from "@/components/ui/progress";
+import { Separator } from "@/components/ui/separator";
+import { examQuestions } from "@/lib/exam-questions";
+import { RotateCcw, Home, CheckCircle, XCircle } from "lucide-react";
 
 interface ScoreCardProps {
   score: number;
@@ -26,24 +26,24 @@ export function ScoreCard({
   const minutes = Math.floor(timeSpent / 60);
   const seconds = timeSpent % 60;
 
-  // Score interpretation
-  let statusLabel = '';
-  let statusColor = '';
+  // score interpretation
+  let statusLabel = "";
+  let statusColor = "";
   if (percentage >= 80) {
-    statusLabel = 'Excellent! You are well-prepared.';
-    statusColor = 'text-emerald-400';
+    statusLabel = "Excellent! You are well-prepared.";
+    statusColor = "text-emerald-400";
   } else if (percentage >= 70) {
-    statusLabel = 'Good! Review weak areas.';
-    statusColor = 'text-cyan-400';
+    statusLabel = "Good! Review weak areas.";
+    statusColor = "text-cyan-400";
   } else if (percentage >= 60) {
-    statusLabel = 'Passing. More study needed.';
-    statusColor = 'text-yellow-400';
+    statusLabel = "Passing. More study needed.";
+    statusColor = "text-yellow-400";
   } else {
-    statusLabel = 'Keep practicing. Focus on fundamentals.';
-    statusColor = 'text-red-400';
+    statusLabel = "Keep practicing. Focus on fundamentals.";
+    statusColor = "text-red-400";
   }
 
-  // Group by chapter
+  // group by chapter
   const byChapter: { [key: string]: { correct: number; total: number } } = {};
   examQuestions.forEach((q, idx) => {
     if (!byChapter[q.chapter]) {
@@ -57,7 +57,7 @@ export function ScoreCard({
 
   return (
     <div className="flex flex-col gap-6 max-w-2xl mx-auto py-8 px-4">
-      {/* Main score display */}
+      {/* main score display */}
       <div className="glass-card p-8 rounded-lg text-center neon-border">
         <p className="text-sm font-semibold text-muted-foreground mb-4 uppercase tracking-wider">
           Exam Results
@@ -77,7 +77,7 @@ export function ScoreCard({
         </div>
       </div>
 
-      {/* Performance by chapter */}
+      {/* performance by chapter */}
       <div className="glass-card p-6 rounded-lg space-y-4">
         <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
           Performance by Chapter
@@ -105,7 +105,7 @@ export function ScoreCard({
         </div>
       </div>
 
-      {/* Review incorrect */}
+      {/* review incorrect */}
       <div className="glass-card p-6 rounded-lg">
         <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
           Questions to Review
@@ -125,9 +125,7 @@ export function ScoreCard({
                   <p className="text-sm text-foreground line-clamp-2">
                     {q.text}
                   </p>
-                  <p className="text-xs text-muted-foreground">
-                    {q.chapter}
-                  </p>
+                  <p className="text-xs text-muted-foreground">{q.chapter}</p>
                 </div>
               </div>
             );
@@ -135,7 +133,7 @@ export function ScoreCard({
         </div>
       </div>
 
-      {/* Action buttons */}
+      {/* action buttons */}
       <div className="flex gap-3 justify-center flex-wrap">
         <Button
           size="lg"
@@ -149,14 +147,14 @@ export function ScoreCard({
           size="lg"
           variant="outline"
           className="glass-card-hover neon-border gap-2"
-          onClick={() => window.location.href = '/'}
+          onClick={() => (window.location.href = "/")}
         >
           <Home className="size-5" />
           Back to Home
         </Button>
       </div>
 
-      {/* Stats footer */}
+      {/* stats footer */}
       <div className="text-center text-xs text-muted-foreground">
         <p>Master Software Project Management through practice and review.</p>
         <p className="mt-1">Good luck on your SPM certification exam! 🚀</p>
