@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { Button } from '@/components/ui/button';
-import { Separator } from '@/components/ui/separator';
-import { Flag } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import { Flag } from "lucide-react";
 
 interface Question {
   id: number;
@@ -22,12 +22,12 @@ interface QuestionDisplayProps {
   isFlagged: boolean;
 }
 
-const optionLetters = ['A', 'B', 'C', 'D'];
+const optionLetters = ["A", "B", "C", "D"];
 const optionColors = [
-  'hover:border-cyan-500/50 hover:bg-cyan-500/5',
-  'hover:border-blue-500/50 hover:bg-blue-500/5',
-  'hover:border-teal-500/50 hover:bg-teal-500/5',
-  'hover:border-indigo-500/50 hover:bg-indigo-500/5',
+  "hover:border-cyan-500/50 hover:bg-cyan-500/5",
+  "hover:border-blue-500/50 hover:bg-blue-500/5",
+  "hover:border-teal-500/50 hover:bg-teal-500/5",
+  "hover:border-indigo-500/50 hover:bg-indigo-500/5",
 ];
 
 export function QuestionDisplay({
@@ -50,17 +50,19 @@ export function QuestionDisplay({
         <button
           onClick={onToggleFlag}
           className="p-1.5 rounded hover:bg-slate-700/50 transition-colors"
-          title={isFlagged ? 'Unflag question' : 'Flag for review'}
+          title={isFlagged ? "Unflag question" : "Flag for review"}
         >
           <Flag
             className={`size-5 ${
-              isFlagged ? 'fill-yellow-500 text-yellow-500' : 'text-muted-foreground'
+              isFlagged
+                ? "fill-yellow-500 text-yellow-500"
+                : "text-muted-foreground"
             }`}
           />
         </button>
       </div>
 
-      {/* Question text */}
+      {/* question text */}
       <div>
         <h3 className="text-lg font-semibold text-balance leading-relaxed">
           {question.text}
@@ -69,13 +71,13 @@ export function QuestionDisplay({
 
       <Separator className="bg-slate-700/50" />
 
-      {/* Answer options */}
+      {/* answer options */}
       <div className="space-y-2">
         {question.options.map((option, idx) => {
           const isSelected = selectedAnswer === idx;
           const bgClass = isSelected
-            ? 'bg-cyan-500/20 border-cyan-500/60'
-            : 'bg-slate-800/40 border-slate-700/50';
+            ? "bg-cyan-500/20 border-cyan-500/60"
+            : "bg-slate-800/40 border-slate-700/50";
 
           return (
             <button
@@ -89,15 +91,17 @@ export function QuestionDisplay({
                 <div
                   className={`size-8 rounded-full border-2 flex items-center justify-center flex-shrink-0 font-semibold text-sm ${
                     isSelected
-                      ? 'border-cyan-500 bg-cyan-500/30 text-cyan-300'
-                      : 'border-slate-600 text-slate-400'
+                      ? "border-cyan-500 bg-cyan-500/30 text-cyan-300"
+                      : "border-slate-600 text-slate-400"
                   }`}
                 >
                   {optionLetters[idx]}
                 </div>
                 <span
                   className={`pt-1 ${
-                    isSelected ? 'text-foreground font-medium' : 'text-slate-300'
+                    isSelected
+                      ? "text-foreground font-medium"
+                      : "text-slate-300"
                   }`}
                 >
                   {option}
@@ -108,7 +112,7 @@ export function QuestionDisplay({
         })}
       </div>
 
-      {/* Explanation (shown after answer) */}
+      {/* explanation */}
       {selectedAnswer !== undefined && (
         <>
           <Separator className="bg-slate-700/50" />
