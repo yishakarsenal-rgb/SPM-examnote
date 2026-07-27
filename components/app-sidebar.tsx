@@ -4,7 +4,7 @@ import { useState } from "react";
 import {
   BookOpen,
   Calendar,
-  DollarSign,
+
   Users,
   AlertTriangle,
   CheckCircle,
