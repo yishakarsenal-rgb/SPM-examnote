@@ -3,7 +3,6 @@
 import {
   BookOpen,
   Calendar,
-  DollarSign,
   Users,
   AlertTriangle,
   CheckCircle,
