@@ -70,7 +70,6 @@ const stats = [
   {
     label: "Total Chapters",
     value: "8",
-    icon: BookOpen,
     color: "text-cyan-400",
   },
   {
