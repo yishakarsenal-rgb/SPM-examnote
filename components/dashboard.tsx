@@ -210,7 +210,6 @@ export function Dashboard({
               step: "1",
               title: "Review Study Notes",
               desc: "Read all 8 chapter notes. Focus on key terms, formulas, and highlighted concepts.",
-              color: "text-cyan-400",
             },
             {
               step: "2",
