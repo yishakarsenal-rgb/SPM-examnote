@@ -53,7 +53,6 @@ const chapters = [
   {
     id: 7,
     title: "Risk Management",
-    icon: AlertTriangle,
     color: "text-red-400",
     bg: "bg-red-500/10 border-red-500/20",
     questions: 10,
