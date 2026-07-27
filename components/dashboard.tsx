@@ -54,7 +54,7 @@ const chapters = [
   {
     id: 7,
     title: "Risk Management",
-    color: "text-red-400",
+    color: "text-white-400",
     bg: "bg-red-500/10 border-red-500/20",
     questions: 10,
   },
@@ -62,7 +62,7 @@ const chapters = [
     id: 8,
     title: "Quality Management",
     color: "text-white-300",
-    bg: "bg-cyan-400/10 border-cyan-400/20",
+    bg: "bg-cyan-400/10 border-red-400/20",
     questions: 10,
   },
 ];
