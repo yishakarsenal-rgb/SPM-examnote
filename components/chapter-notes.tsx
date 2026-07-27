@@ -2,20 +2,6 @@
 
 import { useState } from "react";
 import {
-  BookOpen,
-  Calendar,
-  DollarSign,
-  Users,
-  AlertTriangle,
-  CheckCircle,
-  GitMerge,
-  Target,
-  ChevronDown,
-  ChevronRight,
-  Info,
-  Tag,
-} from "lucide-react";
-import {
   Accordion,
   AccordionContent,
   AccordionItem,
