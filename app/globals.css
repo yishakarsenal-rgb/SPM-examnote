@@ -64,7 +64,7 @@ body {
   --popover: oklch(0.13 0.015 245);
   --popover-foreground: oklch(0.95 0.01 220);
   /* cyan/teal primary accent */
-  --primary: oklch(0.72 0.18 200);
+  --primary: oklch(70.663% 0.20158 147.049);
   --primary-foreground: oklch(0.09 0.01 250);
   /* subtle secondary */
   --secondary: oklch(0.18 0.02 245);
