@@ -47,12 +47,16 @@
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
 }
-
+html,
+body {
+  background-color: #000000 !important;
+  color: #ffffff;
+}
 /* SPM Exam Prep - Dark Tech Theme  */
 :root {
   color-scheme: dark;
   /* deep space dark backgrounds */
-  --background: oklch(0.09 0.01 250);
+  --background: #000000;
   --foreground: oklch(0.95 0.01 220);
   /* glass cards */
   --card: oklch(0.13 0.015 245);
