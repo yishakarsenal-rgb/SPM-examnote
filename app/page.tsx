@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { ParticleBackground } from "@/components/particle-background";
 import { AppSidebar } from "@/components/app-sidebar";
 import { Dashboard } from "@/components/dashboard";
 import { ChapterNotes } from "@/components/chapter-notes";
@@ -31,9 +30,6 @@ export default function Home() {
 
   return (
     <div className="relative w-full h-screen overflow-hidden bg-background">
-      {/* animated particle background */}
-      <ParticleBackground />
-
       {/* main layout */}
       <div className="relative z-10 flex h-screen">
         {/* sidebar */}
