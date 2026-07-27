@@ -10,28 +10,6 @@ interface AppSidebarProps {
   onStartExam: () => void;
 }
 
-const chapterIcons = {
-  1: BookOpen,
-  2: GitMerge,
-  3: Target,
-  4: Calendar,
-  5: DollarSign,
-  6: Users,
-  7: AlertTriangle,
-  8: CheckCircle,
-};
-
-const chapterColors = {
-  1: "text-cyan-400",
-  2: "text-blue-400",
-  3: "text-teal-400",
-  4: "text-violet-400",
-  5: "text-emerald-400",
-  6: "text-orange-400",
-  7: "text-red-400",
-  8: "text-cyan-300",
-};
-
 const chapters = [
   { id: 1, title: "Introduction to SPM" },
   { id: 2, title: "Integration Management" },
@@ -48,16 +26,12 @@ export function AppSidebar({ onSelectChapter, onStartExam }: AppSidebarProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const NavItem = ({
-    icon: Icon,
     label,
     onClick,
-    color = "text-muted-foreground",
     extraClasses = "",
   }: {
-    icon: React.ComponentType<{ className?: string }>;
     label: string;
     onClick: () => void;
-    color?: string;
     extraClasses?: string;
   }) => {
     return (
@@ -71,7 +45,6 @@ export function AppSidebar({ onSelectChapter, onStartExam }: AppSidebarProps) {
           extraClasses,
         )}
       >
-        <Icon className={cn("shrink-0 size-4", color)} />
         {!collapsed && <span className="text-sm truncate">{label}</span>}
       </button>
     );
@@ -86,9 +59,6 @@ export function AppSidebar({ onSelectChapter, onStartExam }: AppSidebarProps) {
           collapsed ? "justify-center px-2" : "",
         )}
       >
-        <div className="flex items-center justify-center size-9 rounded-lg bg-primary/10 border border-primary/20 shrink-0">
-          <GraduationCap className="size-5 text-primary" />
-        </div>
         {!collapsed && (
           <div className="min-w-0">
             <p className="text-sm font-semibold text-foreground truncate neon-text">
@@ -112,16 +82,10 @@ export function AppSidebar({ onSelectChapter, onStartExam }: AppSidebarProps) {
           )}
           <div className="flex flex-col gap-0.5 mb-4">
             <NavItem
-              icon={Home}
               label="Dashboard"
               onClick={() => (window.location.href = "/")}
             />
-            <NavItem
-              icon={FlaskConical}
-              label="Mock Exam (100Q)"
-              onClick={onStartExam}
-              color="text-primary"
-            />
+            <NavItem label="Mock Exam (100Q)" onClick={onStartExam} />
           </div>
 
           {/* chapters */}
@@ -132,19 +96,13 @@ export function AppSidebar({ onSelectChapter, onStartExam }: AppSidebarProps) {
           )}
           {collapsed && <div className="h-px bg-border/50 my-2 mx-1" />}
           <div className="flex flex-col gap-0.5">
-            {chapters.map((ch) => {
-              const Icon = chapterIcons[ch.id as keyof typeof chapterIcons];
-              const color = chapterColors[ch.id as keyof typeof chapterColors];
-              return (
-                <NavItem
-                  key={ch.id}
-                  icon={Icon}
-                  label={`Ch.${ch.id}: ${ch.title}`}
-                  onClick={() => onSelectChapter(ch.id)}
-                  color={color}
-                />
-              );
-            })}
+            {chapters.map((ch) => (
+              <NavItem
+                key={ch.id}
+                label={`Ch.${ch.id}: ${ch.title}`}
+                onClick={() => onSelectChapter(ch.id)}
+              />
+            ))}
           </div>
         </nav>
       </ScrollArea>
@@ -171,7 +129,7 @@ export function AppSidebar({ onSelectChapter, onStartExam }: AppSidebarProps) {
 
   return (
     <>
-      {/* mobile */}
+      {/* mobile button */}
       <button
         className="fixed top-4 left-4 z-50 lg:hidden glass-card p-2 rounded-lg text-muted-foreground hover:text-foreground transition-colors"
         onClick={() => setMobileOpen(!mobileOpen)}
