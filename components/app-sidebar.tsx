@@ -1,23 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import {
-  BookOpen,
-  Calendar,
-  DollarSign,
-  Users,
-  AlertTriangle,
-  CheckCircle,
-  GitMerge,
-  Target,
-  FlaskConical,
-  Home,
-  ChevronLeft,
-  ChevronRight,
-  GraduationCap,
-  Menu,
-  X,
-} from "lucide-react";
+import { ChevronLeft, ChevronRight, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
