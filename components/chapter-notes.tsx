@@ -95,10 +95,7 @@ export function ChapterNotes({ chapterNumber }: ChapterNotesProps) {
                 : "text-muted-foreground hover:text-foreground",
             )}
           >
-            <span className="flex items-center gap-1.5">
-              <Info className="size-3.5" />
-              Study Notes
-            </span>
+            Study Notes
           </button>
           <button
             onClick={() => setActiveTab("terms")}
@@ -109,10 +106,7 @@ export function ChapterNotes({ chapterNumber }: ChapterNotesProps) {
                 : "text-muted-foreground hover:text-foreground",
             )}
           >
-            <span className="flex items-center gap-1.5">
-              <Tag className="size-3.5" />
-              Key Terms ({note.keyTerms.length})
-            </span>
+            Key Terms ({note.keyTerms.length})
           </button>
         </div>
       </div>
@@ -140,12 +134,6 @@ export function ChapterNotes({ chapterNumber }: ChapterNotesProps) {
                 )}
               >
                 <span className="flex items-center gap-2 text-left">
-                  <ChevronRight
-                    className={cn(
-                      "size-4 transition-transform duration-200 shrink-0 data-[state=open]:rotate-90",
-                      color,
-                    )}
-                  />
                   {section.title}
                 </span>
               </AccordionTrigger>
