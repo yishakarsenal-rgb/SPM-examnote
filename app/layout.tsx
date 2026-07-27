@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Software Project Management Exam Prep",
   description:
     "Master Software Project Management with interactive study notes and a 100-question mock exam engine covering scope, schedule, cost, quality, risk, and HR management.",
-  generator: "v0.app",
+  generator: "Yishak",
   icons: {
     icon: [
       {
