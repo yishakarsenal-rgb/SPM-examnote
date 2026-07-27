@@ -207,7 +207,7 @@ export function Dashboard({
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {[
             {
-              step: "01",
+              step: "1",
               title: "Review Study Notes",
               desc: "Read all 8 chapter notes. Focus on key terms, formulas, and highlighted concepts.",
               color: "text-cyan-400",
