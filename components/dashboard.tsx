@@ -1,20 +1,5 @@
 "use client";
 
-import {
-  BookOpen,
-  Calendar,
-  DollarSign,
-  Users,
-  AlertTriangle,
-  CheckCircle,
-  GitMerge,
-  Target,
-  FlaskConical,
-  TrendingUp,
-  Award,
-  Zap,
-  ArrowRight,
-} from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 interface DashboardProps {
