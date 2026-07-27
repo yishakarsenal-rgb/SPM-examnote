@@ -178,11 +178,6 @@ export function Dashboard({
               className={`glass-card glass-card-hover rounded-xl p-5 border ${ch.bg} text-left transition-all duration-200 hover:-translate-y-0.5 group`}
             >
               <div className="flex items-start justify-between mb-3">
-                <div
-                  className={`flex items-center justify-center size-10 rounded-lg ${ch.bg} border ${ch.bg.split(" ")[1]}`}
-                >
-                  <ch.icon className={`size-5 ${ch.color}`} />
-                </div>
                 <span className="text-xs text-muted-foreground font-mono bg-white/5 px-2 py-1 rounded">
                   Ch.{ch.id}
                 </span>
