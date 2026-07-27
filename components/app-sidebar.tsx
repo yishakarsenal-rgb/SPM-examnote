@@ -31,7 +31,7 @@ const chapterIcons = {
   2: GitMerge,
   3: Target,
   4: Calendar,
-  5: DollarSign,
+,
   6: Users,
   7: AlertTriangle,
   8: CheckCircle,
