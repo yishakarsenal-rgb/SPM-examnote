@@ -213,16 +213,15 @@ export function Dashboard({
               color: "text-cyan-400",
             },
             {
-              step: "02",
+              step: "2",
               title: "Learn the Formulas",
               desc: "Memorize EVM formulas (CPI, SPI, EAC, ETC, TCPI), PERT formula, NPV, and CPM rules.",
               color: "text-primary",
             },
             {
-              step: "03",
+              step: "3",
               title: "Take Mock Exam",
               desc: "Complete all 100 questions. Review explanations for every wrong answer. Score 60%+ to pass.",
-              color: "text-emerald-400",
             },
           ].map((tip) => (
             <div key={tip.step} className="flex gap-3">
