@@ -1,6 +1,7 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
+
 interface DashboardProps {
   onStartExam: () => void;
   onSelectChapter: (chapterNum: number) => void;
@@ -75,16 +76,18 @@ const stats = [
   {
     label: "Exam Questions",
     value: "100",
-    icon: FlaskConical,
     color: "text-primary",
   },
   {
     label: "Key Terms",
     value: "80+",
-    icon: TrendingUp,
     color: "text-emerald-400",
   },
-  { label: "Pass Score", value: "60%", icon: Award, color: "text-orange-400" },
+  {
+    label: "Pass Score",
+    value: "60%",
+    color: "text-orange-400",
+  },
 ];
 
 export function Dashboard({
@@ -167,7 +170,7 @@ export function Dashboard({
 
       {/* chapter cards */}
       <div>
-        <h2 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
+        <h2 className="text-lg font-semibold text-foreground mb-4">
           Study Notes by Chapter
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -177,7 +180,7 @@ export function Dashboard({
               onClick={() => onSelectChapter(ch.id)}
               className={`glass-card glass-card-hover rounded-xl p-5 border ${ch.bg} text-left transition-all duration-200 hover:-translate-y-0.5 group`}
             >
-              <div className="flex items-start justify-between mb-3">
+              <div className="flex items-center justify-between mb-3">
                 <span className="text-xs text-muted-foreground font-mono bg-white/5 px-2 py-1 rounded">
                   Ch.{ch.id}
                 </span>
@@ -189,7 +192,7 @@ export function Dashboard({
                 {ch.questions} exam questions
               </p>
               <div className="flex items-center gap-1 text-xs text-muted-foreground group-hover:text-primary transition-colors">
-                <span>Study now</span>
+                <span>Study now &rarr;</span>
               </div>
             </button>
           ))}
@@ -198,7 +201,7 @@ export function Dashboard({
 
       {/* study tips */}
       <div className="glass-card rounded-2xl p-6 border">
-        <h2 className="text-base font-semibold text-foreground mb-4 flex items-center gap-2">
+        <h2 className="text-base font-semibold text-foreground mb-4">
           Exam Strategy
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
