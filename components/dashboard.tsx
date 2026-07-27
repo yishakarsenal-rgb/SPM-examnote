@@ -190,7 +190,6 @@ export function Dashboard({
               </p>
               <div className="flex items-center gap-1 text-xs text-muted-foreground group-hover:text-primary transition-colors">
                 <span>Study now</span>
-                <ArrowRight className="size-3" />
               </div>
             </button>
           ))}
