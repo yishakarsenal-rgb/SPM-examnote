@@ -49,8 +49,6 @@ export function ChapterNotes({ chapterNumber }: ChapterNotesProps) {
       </div>
     );
   }
-
-  const Icon = chapterIcons[chapterNumber];
   const color = chapterColors[chapterNumber];
   const border = chapterBorders[chapterNumber];
 
