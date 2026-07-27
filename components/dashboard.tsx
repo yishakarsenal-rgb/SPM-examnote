@@ -132,7 +132,6 @@ export function Dashboard({
               onClick={onStartExam}
               className="flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg shadow-primary/20 text-sm"
             >
-              <Zap className="size-4" />
               Start 100Q Mock Exam
             </button>
             {percentage !== null && (
