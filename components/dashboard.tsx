@@ -61,7 +61,7 @@ const chapters = [
   {
     id: 8,
     title: "Quality Management",
-    color: "text-red-300",
+    color: "text-white-300",
     bg: "bg-cyan-400/10 border-cyan-400/20",
     questions: 10,
   },
