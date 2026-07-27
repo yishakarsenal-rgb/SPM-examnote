@@ -258,15 +258,6 @@ export function AllNotesOverview({
               )}
             >
               <div className="flex items-center gap-3 mb-3">
-                <div
-                  className={cn(
-                    "flex items-center justify-center size-10 rounded-lg border",
-                    border,
-                    "bg-white/5",
-                  )}
-                >
-                  <Icon className={cn("size-5", color)} />
-                </div>
                 <div>
                   <p className="text-xs text-muted-foreground">
                     Chapter {note.chapter}
