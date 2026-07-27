@@ -58,7 +58,6 @@ const chapters = [
   {
     id: 5,
     title: "Cost Management",
-    icon: DollarSign,
     color: "text-emerald-400",
     bg: "bg-emerald-500/10 border-emerald-500/20",
     questions: 10,
