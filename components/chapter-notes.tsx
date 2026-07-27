@@ -57,15 +57,6 @@ export function ChapterNotes({ chapterNumber }: ChapterNotesProps) {
       {/* chapter header */}
       <div className={cn("glass-card rounded-2xl p-6 border", border)}>
         <div className="flex items-start gap-4">
-          <div
-            className={cn(
-              "flex items-center justify-center size-12 rounded-xl border shrink-0",
-              border,
-              "bg-white/5",
-            )}
-          >
-            <Icon className={cn("size-6", color)} />
-          </div>
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 mb-1">
               <Badge
