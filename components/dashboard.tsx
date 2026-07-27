@@ -46,7 +46,6 @@ const chapters = [
   {
     id: 6,
     title: "HR Management",
-    icon: Users,
     color: "text-orange-400",
     bg: "bg-orange-500/10 border-orange-500/20",
     questions: 10,
