@@ -1,7 +1,6 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
-
 interface DashboardProps {
   onStartExam: () => void;
   onSelectChapter: (chapterNum: number) => void;
@@ -12,7 +11,6 @@ const chapters = [
   {
     id: 1,
     title: "Introduction to SPM",
-    icon: BookOpen,
     color: "text-cyan-400",
     bg: "bg-cyan-500/10 border-cyan-500/20",
     questions: 10,
@@ -20,7 +18,6 @@ const chapters = [
   {
     id: 2,
     title: "Integration Management",
-    icon: GitMerge,
     color: "text-blue-400",
     bg: "bg-blue-500/10 border-blue-500/20",
     questions: 10,
