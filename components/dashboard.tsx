@@ -25,7 +25,6 @@ const chapters = [
   {
     id: 3,
     title: "Scope Management",
-    icon: Target,
     color: "text-teal-400",
     bg: "bg-teal-500/10 border-teal-500/20",
     questions: 10,
