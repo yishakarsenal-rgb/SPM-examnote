@@ -216,7 +216,6 @@ export function Dashboard({
               step: "2",
               title: "Learn the Formulas",
               desc: "Memorize EVM formulas (CPI, SPI, EAC, ETC, TCPI), PERT formula, NPV, and CPM rules.",
-              color: "text-primary",
             },
             {
               step: "3",
