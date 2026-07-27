@@ -159,7 +159,6 @@ export function Dashboard({
             key={stat.label}
             className="glass-card rounded-xl p-4 border flex flex-col gap-2"
           >
-            <stat.icon className={`size-5 ${stat.color}`} />
             <p className={`text-2xl font-bold ${stat.color}`}>{stat.value}</p>
             <p className="text-xs text-muted-foreground">{stat.label}</p>
           </div>
