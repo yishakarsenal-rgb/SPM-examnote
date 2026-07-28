@@ -169,7 +169,7 @@ export function ChapterNotes({ chapterNumber }: ChapterNotesProps) {
 
                 {section.calculations && section.calculations.length > 0 && (
                   <div className="mt-4 pt-4 border-t border-slate-700/50 space-y-3">
-                    <p className="text-xs font-semibold text-cyan-400 uppercase tracking-wide">
+                    <p className="text-xs font-semibold text-red-400 uppercase tracking-wide">
                       Calculation Examples
                     </p>
                     {section.calculations.map((calc, j) => (
@@ -177,7 +177,7 @@ export function ChapterNotes({ chapterNumber }: ChapterNotesProps) {
                         key={j}
                         className="bg-slate-900/50 border border-slate-700/50 rounded-lg p-3 space-y-2"
                       >
-                        <div className="text-xs font-mono text-cyan-300 bg-slate-800/50 p-2 rounded border border-cyan-500/20">
+                        <div className="text-xs font-mono text-white-300 bg-slate-800/50 p-2 rounded border border-cyan-500/20">
                           {calc.formula}
                         </div>
                         <p className="text-xs text-gray-300 leading-relaxed">
