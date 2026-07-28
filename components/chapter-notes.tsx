@@ -20,7 +20,7 @@ const chapterColors: Record<number, string> = {
   5: "text-white-400",
   6: "text-white-400",
   7: "text-white-400",
-  8: "text-cyan-300",
+  8: "text-white-300",
 };
 
 const chapterBorders: Record<number, string> = {
