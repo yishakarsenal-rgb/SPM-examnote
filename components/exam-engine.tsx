@@ -5,17 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Separator } from "@/components/ui/separator";
 import { examQuestions } from "@/lib/exam-questions";
 import { QuestionDisplay } from "./question-display";
 import { ScoreCard } from "./score-card";
 import { Calculator } from "./calculator";
-import {
-  Clock,
-  Flag,
-  RotateCcw,
-  Calculator as CalculatorIcon,
-} from "lucide-react";
+import { Clock, Flag, Calculator as CalculatorIcon } from "lucide-react";
 
 type Answer = { [key: number]: number };
 type Flagged = Set<number>;
@@ -115,11 +109,10 @@ export function ExamEngine() {
   }
 
   const question = mappedQuestions[currentQuestion];
-  const isAnswered = currentQuestion in answers;
   const isFlagged = flagged.has(currentQuestion);
 
   return (
-    <div className="flex flex-col gap-4 h-full">
+    <div className="flex flex-col gap-4 h-full relative pb-12 sm:pb-0">
       {/* header with timer and progress */}
       <div className="glass-card p-4 rounded-lg">
         <div className="flex items-center justify-between gap-4 flex-wrap">
@@ -167,40 +160,44 @@ export function ExamEngine() {
             isFlagged={isFlagged}
           />
 
-          {/* action buttons */}
-          <div className="flex gap-2 flex-wrap">
+          {/* action buttons (Sticky for Mobile Compatibility) */}
+          <div className="sticky bottom-0 z-30 bg-background/95 backdrop-blur p-2 border-t border-border/50 sm:border-0 sm:p-0 sm:bg-transparent sm:static flex gap-2 flex-wrap items-center">
             <Button
               variant="outline"
               size="sm"
-              className="glass-card-hover neon-border"
+              className="glass-card-hover neon-border text-xs sm:text-sm px-2.5 sm:px-3"
               onClick={handleToggleFlag}
             >
-              <Flag className="size-4 mr-2" />
+              <Flag className="size-3.5 sm:size-4 mr-1 sm:mr-2" />
               {isFlagged ? "Unflag" : "Flag"}
             </Button>
-            <div className="flex-1" />
+
+            <div className="flex-1 min-w-[8px]" />
+
             <Button
               variant="outline"
               size="sm"
-              className="glass-card-hover neon-border"
+              className="glass-card-hover neon-border text-xs sm:text-sm px-2.5 sm:px-3"
               onClick={() => setCalculatorOpen(true)}
             >
-              <CalculatorIcon className="size-4 mr-1.5" />
+              <CalculatorIcon className="size-3.5 sm:size-4 mr-1 sm:mr-1.5" />
               Calculator
             </Button>
+
             <Button
               variant="outline"
               size="sm"
               disabled={currentQuestion === 0}
-              className="glass-card-hover neon-border"
+              className="glass-card-hover neon-border text-xs sm:text-sm px-2.5 sm:px-3"
               onClick={() => setCurrentQuestion((p) => p - 1)}
             >
               Previous
             </Button>
+
             {currentQuestion < examQuestions.length - 1 ? (
               <Button
                 size="sm"
-                className="bg-cyan-600 hover:bg-cyan-500 text-white"
+                className="bg-cyan-600 hover:bg-cyan-500 text-white text-xs sm:text-sm px-3 sm:px-4"
                 onClick={() => setCurrentQuestion((p) => p + 1)}
               >
                 Next
@@ -208,7 +205,7 @@ export function ExamEngine() {
             ) : (
               <Button
                 size="sm"
-                className="bg-emerald-600 hover:bg-emerald-500 text-white"
+                className="bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm px-3 sm:px-4"
                 onClick={handleSubmitExam}
               >
                 Submit Exam
