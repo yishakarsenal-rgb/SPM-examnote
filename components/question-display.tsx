@@ -24,8 +24,8 @@ interface QuestionDisplayProps {
 
 const optionLetters = ["A", "B", "C", "D"];
 const optionColors = [
-  "hover:border-red-500/50 hover:bg-red-500/5",
-  "hover:border-blue-500/50 hover:bg-blue-500/5",
+  "hover:border-yellow-500/50 hover:bg-yellow-500/5",
+  "hover:border-white-500/50 hover:bg-white-500/5",
   "hover:border-teal-500/50 hover:bg-teal-500/5",
   "hover:border-indigo-500/50 hover:bg-indigo-500/5",
 ];
