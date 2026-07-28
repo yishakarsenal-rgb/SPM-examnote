@@ -5,14 +5,11 @@ import { AppSidebar } from "@/components/app-sidebar";
 import { Dashboard } from "@/components/dashboard";
 import { ChapterNotes } from "@/components/chapter-notes";
 import { ExamEngine } from "@/components/exam-engine";
-import { Calculator } from "@/components/calculator";
 import { Footer } from "@/components/footer";
-import { Calculator as CalculatorIcon } from "lucide-react";
 
 export default function Home() {
   const [view, setView] = useState<"home" | "chapter" | "exam">("home");
   const [selectedChapter, setSelectedChapter] = useState<number | null>(null);
-  const [calculatorOpen, setCalculatorOpen] = useState(false);
 
   const handleSelectChapter = (chapterNum: number) => {
     setSelectedChapter(chapterNum);
@@ -65,21 +62,6 @@ export default function Home() {
           </div>
         </main>
       </div>
-
-      {/* floating calculator button */}
-      <button
-        onClick={() => setCalculatorOpen(true)}
-        className="fixed bottom-24 right-8 z-40 flex items-center justify-center size-14 rounded-full glass-card neon-border hover:bg-cyan-500/10 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/30 active:scale-95 group"
-        title="Open Calculator"
-      >
-        <CalculatorIcon className="size-6 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
-      </button>
-
-      {/* calculator modal */}
-      <Calculator
-        isOpen={calculatorOpen}
-        onClose={() => setCalculatorOpen(false)}
-      />
 
       {/* footer */}
       <Footer />
