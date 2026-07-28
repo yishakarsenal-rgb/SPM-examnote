@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 import { studyNotes, type ChapterNote } from "@/lib/study-notes";
 
 const chapterColors: Record<number, string> = {
-  1: "text-cyan-400",
+  1: "text-white-400",
   2: "text-blue-400",
   3: "text-teal-400",
   4: "text-violet-400",
