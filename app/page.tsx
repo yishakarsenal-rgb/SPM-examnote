@@ -37,16 +37,6 @@ export default function Home() {
 
         {/* main content area */}
         <main className="flex-1 overflow-hidden flex flex-col">
-          {/* header with home button */}
-          <header className="border-b border-slate-700/50 bg-background/80 backdrop-blur-sm px-6 py-4">
-            <button
-              onClick={handleBackHome}
-              className="text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
-            >
-              ← Back to Home
-            </button>
-          </header>
-
           {/* content */}
           <div className="flex-1 overflow-auto pb-28">
             {view === "home" && (
