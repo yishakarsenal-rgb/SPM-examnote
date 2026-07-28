@@ -274,7 +274,7 @@ export const studyNotes: ChapterNote[] = [
     chapter: 4,
     title: "Project Schedule Management",
     icon: "Calendar",
-    color: "from-white-500/20 to-white-500/20",
+    color: "from-violet-500/20 to-blue-500/20",
     keyTerms: [
       {
         term: "Critical Path",
