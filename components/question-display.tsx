@@ -27,7 +27,7 @@ const optionColors = [
   "hover:border-yellow-500/50 hover:bg-yellow-500/5",
   "hover:border-yellow-500/50 hover:bg-yellow-500/5",
   "hover:border-yellow-500/50 hover:bg-yellow-500/5",
-  "hover:border-indigo-500/50 hover:bg-indigo-500/5",
+  "hover:border-yellow-500/50 hover:bg-yellow-500/5",
 ];
 
 export function QuestionDisplay({
