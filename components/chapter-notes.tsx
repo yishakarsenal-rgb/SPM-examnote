@@ -177,7 +177,7 @@ export function ChapterNotes({ chapterNumber }: ChapterNotesProps) {
                         key={j}
                         className="bg-slate-900/50 border border-slate-700/50 rounded-lg p-3 space-y-2"
                       >
-                        <div className="text-xs font-mono text-white-300 bg-slate-800/50 p-2 rounded border border-black-500/20">
+                        <div className="text-xs font-mono text-white-300 bg-black-800/50 p-2 rounded border border-black-500/20">
                           {calc.formula}
                         </div>
                         <p className="text-xs text-gray-300 leading-relaxed">
