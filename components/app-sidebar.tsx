@@ -61,11 +61,8 @@ export function AppSidebar({ onSelectChapter, onStartExam }: AppSidebarProps) {
       >
         {!collapsed && (
           <div className="min-w-0">
-            <p className="text-sm font-semibold text-foreground truncate neon-text">
-              SPM ExamPrep
-            </p>
-            <p className="text-xs text-muted-foreground truncate">
-              Software Project Mgmt
+            <p className="text-sm font-semibold text-red-500 truncate neon-text">
+              Software Project Mgmt ExamPrep
             </p>
           </div>
         )}
