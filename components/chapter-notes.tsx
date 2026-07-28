@@ -16,7 +16,7 @@ const chapterColors: Record<number, string> = {
   1: "text-white-400",
   2: "text-white-400",
   3: "text-white-400",
-  4: "text-violet-400",
+  4: "text-white-400",
   5: "text-emerald-400",
   6: "text-orange-400",
   7: "text-red-400",
