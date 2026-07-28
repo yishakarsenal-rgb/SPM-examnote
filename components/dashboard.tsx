@@ -33,8 +33,8 @@ const chapters = [
   {
     id: 4,
     title: "Schedule Management",
-    color: "text-violet-400",
-    bg: "bg-violet-500/10 border-violet-500/20",
+    color: "text-white-300",
+    bg: "bg-red-400/10 border-red-400/20",
     questions: 10,
   },
   {
