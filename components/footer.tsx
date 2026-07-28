@@ -1,4 +1,4 @@
-import { Separator } from '@/components/ui/separator';
+import { Separator } from "@/components/ui/separator";
 
 export function Footer() {
   return (
@@ -9,7 +9,8 @@ export function Footer() {
           SPM Exam Preparation Platform
         </div>
         <div className="text-xs text-slate-500 font-light">
-          Developed by <span className="text-slate-400 font-medium">Yishak</span>
+          Developed by{" "}
+          <span className="text-slate-400 font-medium">Yishak Mekuannent</span>
         </div>
       </div>
     </footer>
