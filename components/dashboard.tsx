@@ -12,8 +12,8 @@ const chapters = [
   {
     id: 1,
     title: "Introduction to SPM",
-    color: "text-cyan-400",
-    bg: "bg-cyan-500/10 border-cyan-500/20",
+    color: "text-white-300",
+    bg: "bg-red-400/10 border-red-400/20",
     questions: 10,
   },
   {
