@@ -12,6 +12,6 @@ Features
 
 Tech Stack
 
-- Frontend:-Next.js / React
-- Styling:-Tailwind CSS
-- Deployment and Hosting:-Vercel
+Frontend:-Next.js / React
+Styling:-Tailwind CSS
+Deployment and Hosting:-Vercel
