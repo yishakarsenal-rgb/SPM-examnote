@@ -1,4 +1,4 @@
-#Software Project Management Exam helper Note
+##Software Project Management Exam helper Note
 
 A modern, responsive web application designed to help computer science students prepare for their Software Project Management (SPM) exams. The platform provides structured notes, study guides, and essential resources to streamline exam preparation.
 
