@@ -5,7 +5,7 @@ Live Demo: https://spm-examnote.vercel.app/
 
 Features
 
-- Structured Exam Modules:Notes organized by chapters and key software project management topics (e.g., project pl.
+- Structured Exam Modules:Notes organized by chapters and key software project management topics .
 - Responsive Design:Optimized for seamless reading and navigation across desktops, tablets, and smartphones.
 - Interactive Interface:Clean UI built to minimize distractions and maximize study efficiency.
 - Fast Performance:Blazing-fast page loads and smooth transitions for an optimal user experience.
